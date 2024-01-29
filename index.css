@@ -1,0 +1,124 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#closeButton {
+    width: 100px;
+    height: 50px;
+    background-color: purple;
+    border: purple;
+}
+
+.youtube {
+    border: purple;
+    width: 100px;
+    height: 50px;
+    background-color: purple;
+}
+
+.togglediv {
+    text-align: right;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -200px;
+    background-color: purple;
+    transition: left 0.3s ease;
+}
+
+#sidebar.active {
+    left: 0 !important;
+}
+
+#sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    transition: all 0.3s;
+}
+
+#sidebar a:hover {
+    background: #5a6268;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar .close-btn {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    font-size: 20px;
+    transition: all 0.3s;
+}
+
+#toggleButton {
+    cursor: pointer;
+}
+
+.meal-layer {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    transition: 0.5s;
+    margin-right: 1%;
+}
+
+.meal:hover .meal-layer {
+    top: 0;
+    cursor: pointer;
+}
+
+.side-nav-menu {
+    z-index: 99;
+    background-color: #333; /* Set to your desired color */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+}
+
+.togglediv {
+    width: 10px;
+}

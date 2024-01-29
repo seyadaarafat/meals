@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&family=Amatic+SC&family=Montserrat:wght@400;600&family=Open+Sans:wght@300&family=Roboto:wght@300;400&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-4 col-xl-2 px-sm-2 px-0" id="sidebar">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li><a href="#" id="search">Search</a></li>
+                        <li><a href="" id="categoriesLink">Categories</a></li>
+                        <li><a href="" id="areaLink">Areas</a></li>
+                        <li><a href="">Ingredients</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="col-md-3 togglediv">
+                <button id="toggleButton" style="background-color: purple;">></button>
+
+            </div>
+        </div>
+    </div>
+    
+    <div id="areasModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAreasModal()">&times;</span>
+            <div id="areasContent">
+                <!-- Area items will be displayed here -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-3">
+        <div class="row g-4" id="categoryImagesRow">
+            <!-- Category images will be displayed here -->
+        </div>
+    </div>
+
+    <div id="mealDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="mealDetailsContent"></div>
+        </div>
+    </div>
+    
+    <!-- Search Modal -->
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSearchModal()">&times;</span>
+            <div class="container mt-3">
+                <form id="searchFormModal"> 
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstLetterInputModal">Search by First Letter</label>
+                            <input type="text" class="form-control" id="firstLetterInputModal" placeholder="Enter a letter">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="nameInputModal">Search by Name</label>
+                            <input type="text" class="form-control" id="nameInputModal" placeholder="Enter a name">
+                        </div>
+                        <div class="col-md-12 text-center">
+                            <button type="button" class="btn btn-primary" id="searchButtonModal">Search</button>
+                        </div>
+                    </div>
+                </form>
+                <button id="backButtonSearchModal">Back</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Categories Modal -->
+    <div id="categoriesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCategoriesModal()">&times;</span>
+            <div id="categoriesContent">
+                <button id="backButtonCategoriesModal">Back</button>
+
+            </div>
+            <div id="rowData"></div>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script src="css/bootstrap.bundle.js"></script>
+        <script src="index.js"></script>
+
+    </body>
+    
+
+
+</html>
